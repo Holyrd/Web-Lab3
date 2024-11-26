@@ -1,56 +1,35 @@
 body{
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 3fr;
     padding: 0;
     margin: 0;
 }
 
-#colorBlue{
-    background-color: aqua;
-}
-
-#colorOrange{
-    background-color: orange;
-}
-
-#colorGreen{
-    background-color: aquamarine;
-}
-
-#colorWhite{
-    background-color: white;
-}
-
-
 /* Menu */
-
-.menu {
-    background-color: cyan;
-    border-style: solid;
-    border-width: 0.5px;
-}
-
-.menu>nav{
+nav{
     display: grid;
     grid-template-columns: 80% 20%;
     height: 150px;
     justify-content: space-between;
     align-items: center;
+    background-color: cyan;
+    border-style: solid;
+    border-width: 0.5px;
 }
 
-.menu>nav>ol {
+nav>ol {
     display: grid;
     grid-template-columns: 15% 15% 15% 15% 15% 15%;
     list-style: none;
 }
 
-.menu>nav>ol>li {
+nav>ol>li {
     padding: 6%;
     border-style: solid;
     border-width: 0.5px;
 }
 
-.menu>nav>ol>li>a{
+nav>ol>li>a{
     font-size: xx-large;
 } 
 
@@ -85,26 +64,31 @@ body{
 
 .first{
 grid-area: first;
-margin-right: 5%;    
+margin-right: 5%;   
+background-color: aquamarine;
 }
 
 .second{
     grid-area: second;
     margin-right: 5%;    
+    background-color: white;
 }
 
 .third{
 grid-area: third;
 margin-right: 2.5%;
+background-color: orange;
 }
 
 .fourth{
     grid-area: fourth;
     margin-right: 5%;
+    background-color: aquamarine;
 }
 
 .fifts{
     grid-area: fifts;
+    background-color: white;
 }
 
 /* End */
@@ -117,9 +101,10 @@ margin-right: 2.5%;
     align-items: center;
     border-style: solid;
     border-width: 0.5px;
+    background-color: cyan;
 }
 
-#textsize{
+.textsize{
     padding: 30px;
     margin: 0;
     font-size: large;
@@ -135,17 +120,17 @@ margin-right: 2.5%;
 
 @media screen and (min-width: 320px) and (max-width: 700px){
     body{
-        grid-template-rows: 1fr 13fr;
+        grid-template-rows: 0fr 13fr;
     }
-    .menu>nav>ol {
+    nav>ol {
         grid-template-columns: 17% 17% 17% 17% 17% 16%;
         margin-block-start: 0em;
         padding-inline-start: 1px;
     }
-    .menu>nav>ol>li>a{
+    nav>ol>li>a{
         font-size: medium;
     } 
-    #textsize{
+    .textsize{
         padding: 5px;
         margin: 0;
         font-size: medium;
@@ -179,12 +164,12 @@ margin-right: 2.5%;
 
   @media screen and (min-width: 700px) and (max-width: 1100px){
     body{
-        grid-template-rows: 1fr 7fr;
+        grid-template-rows: 0fr 7fr;
     }
-    .menu>nav>ol>li>a{
+    nav>ol>li>a{
         font-size: large;
     } 
-    .menu>nav>ol {
+    nav>ol {
         grid-template-columns: 10% 10% 10% 10% 10% 10%;
     }
   }
